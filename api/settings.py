@@ -25,7 +25,7 @@ SECRET_KEY = '%8b8sthj6l-r&qr0y&4ee-b#&@9gq&m%ui%84b=uvz!1_ci24b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-BASE_URL = 'http://localhost:8600'
+BASE_URL = 'http://api.savetube.me'
 ALLOWED_HOSTS = []
 
 
@@ -122,7 +122,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = ( os.path.join('static'), )
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "*"
 ]
 
 CORS_ALLOW_HEADERS = [
