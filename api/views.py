@@ -28,7 +28,7 @@ def download(request, token):
 
     # internal redirect for nginx to handle the download
     response = HttpResponse()
-    response['X-Accel-Redirect'] = f'/media/'+decoded['file']    
+    response['X-Accel-Redirect'] = f'/backend/media/'+decoded['file']
     response['Content-Type'] = mime_type
     response['Content-Disposition'] = 'attachment; filename="{}"'.format(
         decoded['download-name']
