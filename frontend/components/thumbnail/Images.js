@@ -10,7 +10,7 @@ const Images = ({ resolutions }) => {
         }}
       ></hr>
       <div className="container text-center 5-images my-[3rem] px-[15px] mx-auto">
-        <div className="images-container text-center sm:flex flex-wrap justify-center xl:w-[1140px] mx-auto">
+        <div id="thumbnailDownload" className="images-container text-center sm:flex flex-wrap justify-center xl:w-[1140px] mx-auto">
           {resolutions && resolutions.map((image) => (
             <div
               className="image  px-[15px] mb-[48px] text-center flex flex-col items-center sm:w-[50%]"

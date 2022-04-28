@@ -23,6 +23,30 @@ async function fetchThumbnailData(url) {
 }
 
 
+function scrollDown(downloadType) {
+  let elem = null;
+  if (downloadType == "thumbnail") {
+    elem = document.getElementById("thumbnailDownload");
+  } else {
+    elem = document.getElementById("downloadSection");
+  }
+  if (elem != null) {
+    if (downloadType == "thumbnail") {
+      elem.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    } else {
+      elem.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      });
+    }
+  }
+}
+
 
 const Demo_Images = [
   {
@@ -92,7 +116,12 @@ const Link = ({ data,contentType }) => {
       setImages(data)
 
       setLoading(false);
+
       setShowVid(true);
+
+      setTimeout(()=>{
+        scrollDown("thumbnail")
+      },300)
     }
 
     return !!pattern.test(str);
@@ -119,9 +148,9 @@ const Link = ({ data,contentType }) => {
       </h1>
       <p className=" mb-4 mx-[15px]">{data.p}</p>
 
-      <form
+      <div
         className="custom:w-5/6 w-[350px] sm:w-[650px] lg:w-[778px] sm:my-[28px]  mx-auto sm:flex sm:justify-center md-w[960px]"
-        onSubmit={getVideoHandler}
+       
       >
         <div className="mb-2 sm:w-[450px] md:w-[640px] lg:w-[760px]   ">
           <input
@@ -138,11 +167,12 @@ const Link = ({ data,contentType }) => {
 
         <button
           type="submit"
+          onClick={()=>validURL(inputVal)}
           className="text-white w-[100%] h-[50px] sm:w-[152px] sm:h-[52px] font-[600] bg-[#fd0054] hover:bg-[#dc2260] focus:outline-none  rounded-lg  text-center text-[17px] shadow-2xl xl:w-[180px]"
         >
           Get Thumbnail
         </button>
-      </form>
+      </div>
 
       {isUrl && loading && <Loading />}
       {showVid && images && <Images resolutions={images.resolutions} />}

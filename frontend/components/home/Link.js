@@ -37,7 +37,29 @@ async function fetchData(url) {
   return data;
 }
 
-
+function scrollDown(downloadType) {
+  let elem = null;
+  if (downloadType == "thumbnail") {
+    elem = document.getElementById("thumbnailDownload");
+  } else {
+    elem = document.getElementById("downloadSection");
+  }
+  if (elem != null) {
+    if (downloadType == "thumbnail") {
+      elem.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    } else {
+      elem.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      });
+    }
+  }
+}
 
 const Link = ({ data,contentType }) => {
   const [isUrl, setIsUrl] = useState("");
@@ -83,16 +105,19 @@ const Link = ({ data,contentType }) => {
       
 
       setCurrentVideoData(data)
-      
-      console.log(data)
-
         setLoading(false);
         setShowVid(true);
+
+        setTimeout(()=>{
+          scrollDown("video")
+        },300)
 
     }
 
     return !!pattern.test(str);
   };
+
+  
 
   ////////// get video function ////////
   const getVideoHandler = async(e) => {
@@ -118,8 +143,8 @@ const Link = ({ data,contentType }) => {
         {data.title}
       </h1>
       <p className=" mb-4 mx-[15px]">{data.p}</p>
-      {!isUrl && (
-        <form
+
+        <div
           className="custom:w-5/6 w-[350px] sm:w-[650px] lg:w-[778px] sm:my-[28px]  mx-auto sm:flex sm:justify-center md-w[960px]"
         >
           <div className="mb-2 sm:w-[450px] md:w-[640px] lg:w-[760px]   ">
@@ -137,13 +162,13 @@ const Link = ({ data,contentType }) => {
 
           <button
             type="submit"
-
-            className="text-white w-[100%] h-[50px] sm:w-[152px] sm:h-[52px] font-[600] bg-[#fd0054] hover:bg-[#dc2260] focus:outline-none  rounded-lg  text-center text-[17px] shadow-2xl"
+            onClick={()=>validURL(inputVal)}
+            className=" text-white w-[100%] h-[50px] sm:w-[152px] sm:h-[52px] font-[600] bg-[#fd0054] hover:bg-[#dc2260] focus:outline-none  rounded-lg  text-center text-[17px] shadow-2xl"
           >
             {data.button}
           </button>
-        </form>
-      )}
+        </div>
+
       {isUrl && loading && <Loading />}
       {showVid && <Video contentType={contentType} currentVideoData={currentVideoData} />}
       {inputVal.length > 0 && !isUrl && (
