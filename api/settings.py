@@ -25,7 +25,7 @@ SECRET_KEY = '%8b8sthj6l-r&qr0y&4ee-b#&@9gq&m%ui%84b=uvz!1_ci24b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-BASE_URL = 'http://api.savetube.me/backend'
+BASE_URL = 'http://api.savetube.me'
 ALLOWED_HOSTS = ["*"]
 
 
