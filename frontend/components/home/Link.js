@@ -8,7 +8,7 @@ async function fetchThumbnailData(url) {
 
   formData.append("url", url);
 
-  const response = await fetch(`http://api.savetube.me/api/v1/thumbnails?url=${url}`, {
+  const response = await fetch(`http://api.savetube.me/backend/api/v1/thumbnails?url=${url}`, {
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
     },
@@ -28,7 +28,7 @@ async function fetchData(url) {
 
   console.log(url)
 
-  const response = await fetch(`http://api.savetube.me/api/v1/info?url=${url}`);
+  const response = await fetch(`http://api.savetube.me/backend/api/v1/info?url=${url}`);
 
   const data = await response.json();
 
