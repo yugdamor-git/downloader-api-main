@@ -11,6 +11,21 @@ services:
             - "8700:8700"
         networks:
             proxy:
+        
+        
+
+    frontend:
+        container_name: frontend
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        
+        ports:
+            -"3000:3000"
+        
+        depends_on:
+            - api
+            - api-server
 
     api-server:
         container_name: api-server
