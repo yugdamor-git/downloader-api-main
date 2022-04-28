@@ -26,7 +26,8 @@ services:
         depends_on:
             - api
             - api-server
-
+        proxy:
+            name: proxy
     api-server:
         container_name: api-server
         restart: always
