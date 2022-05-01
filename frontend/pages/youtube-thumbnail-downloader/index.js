@@ -3,7 +3,10 @@ import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import meta from "../../public/meta";
+
+
 ////////////// function for languages handler //////////
+
 export async function getStaticProps({ locale }) {
   return {
     props: {
@@ -16,6 +19,7 @@ export async function getStaticProps({ locale }) {
   };
 }
 //// components ////////
+
 import Navbar from "../../components/ui/navbar/Navbar";
 import Link from "../../components/thumbnail/Link";
 import Cards from "../../components/youtube-to-mp3/Cards";
@@ -24,10 +28,8 @@ import HowToConvert from "../../components/youtube-to-mp3/HowToConvert";
 
 export default function YoutubeThumbinalDownloader(props) {
   const router = useRouter();
+
   const { t } = useTranslation();
-
-
-
 
   const CARDS = [
     {
