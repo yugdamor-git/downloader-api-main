@@ -157,15 +157,20 @@ const Video = ({currentVideoData,contentType}) => {
         )}
 
         {showDownload && (
-          <div className="download btn text-left">
+          <div className="download btn text-left w-40">
             <a
-              type="button"
-              className="text-white bg-green-600  hover:bg-green-500  font-medium rounded-lg text-sm px-7 py-3 text-center mr-2 mb-2"
-              href={video}
-              download
-            >
-              Download
-            </a>
+                href={video}
+                download
+                className="text-white bg-green-600  hover:bg-green-500  rounded-lg p-2 text-center  mb-2 font-[700] flex items-center cursor-pointer"
+              >
+                
+                <img
+                  src="/download.svg"
+                  className="w-[18px] m-2"
+                  alt="download"
+                />
+                <span>Download</span>
+              </a>
           </div>
         )}
       </div>
