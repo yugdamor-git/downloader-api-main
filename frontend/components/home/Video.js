@@ -74,7 +74,7 @@ const Video = ({currentVideoData,contentType}) => {
     router.reload();
   };
   return (
-    <div id="downloadSection" className="my-2 p-[20px] custom:min-h-[400px] min-h-[470px] border-[1px] border-solid border-[#00000020] bg-[#e9ecef] mt-[50px] sm:flex  sm:gap-8 mx-[24px] lg:max-w-[920px]  lg:mx-auto sm:min-h-[250px]">
+    <div id="downloadSection" className="my-2 p-[20px] custom:min-h-[400px] min-h-[380px] border-[1px] border-solid border-[#00000020] bg-[#e9ecef] mt-[50px] sm:flex  sm:gap-8 mx-[24px] lg:max-w-[920px]  lg:mx-auto sm:min-h-[250px]">
       <img
         src={currentVideoData.thumbnail}
         alt="image"
