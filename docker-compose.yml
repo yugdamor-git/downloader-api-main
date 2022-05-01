@@ -58,7 +58,7 @@ services:
             - ./certbot/www/:/var/www/certbot/:rw
             - ./certbot/conf/:/etc/letsencrypt/:rw
         command: >-
-             certonly --reinstall --webroot --webroot-path=/var/www/certbot
+             certonly --reinstall --test-cert --webroot --webroot-path=/var/www/certbot
              --email yugdamor.dev@gmail.com --agree-tos --no-eff-email
              -d ytshorts.savetube.me
 
