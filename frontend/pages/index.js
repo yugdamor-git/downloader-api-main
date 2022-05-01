@@ -228,7 +228,7 @@ export default function Home(props) {
         thumbnail={t("home:youtube_thumbnail")}
         href="/"
       />
-      <div>
+      <div className="flex justify-center flex-center mt-5">
       <ins className="adsbygoogle"
      style={{display:"inline-block",width:"320px",height:"100px"}}
      data-ad-client="ca-pub-3476621303569503"
@@ -244,7 +244,7 @@ export default function Home(props) {
         }}
         contentType="video"
       />
-      <div>
+      <div className="flex justify-center flex-center mt-5">
       <ins className="adsbygoogle"
      style={{display:"block"}}
      data-ad-client="ca-pub-3476621303569503"
@@ -252,6 +252,7 @@ export default function Home(props) {
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
       </div>
+
       <Cards
         cards={CARDS}
         title={t("home:card_main_title")}
