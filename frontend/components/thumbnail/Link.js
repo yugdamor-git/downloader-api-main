@@ -107,7 +107,7 @@ const Link = ({ data,contentType }) => {
     //   "i"
     // ); // fragment locator
      var pattern = new RegExp(
-      "^(https?\:\/\/)?(www\.youtube\.com|youtu\.be)\/.+$",
+      "^(https?\:\/\/)?(www\.youtube\.com|youtu\.be|youtube\.com)\/.+$",
       "i"
     ); // fragment locator
     setIsUrl(pattern.test(str));
