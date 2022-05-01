@@ -38,6 +38,8 @@ services:
         volumes:
             - ./static:/home/app/web/static
             - ./media:/home/app/web/media
+            - ./certbot/www/:/var/www/certbot/:rw
+            - ./certbot/conf/:/etc/letsencrypt/:rw
             
     memcached:
         container_name: memcached
@@ -50,9 +52,15 @@ services:
     
     certbot:
         image: certbot/certbot:latest
+        depends_on:
+            - api-server
         volumes:
             - ./certbot/www/:/var/www/certbot/:rw
             - ./certbot/conf/:/etc/letsencrypt/:rw
+        command: >-
+             certonly --reinstall --webroot --webroot-path=/var/www/certbot
+             --email yugdamor.dev@gmail.com --agree-tos --no-eff-email
+             -d api.savetube.me
 
 networks:
     proxy:
