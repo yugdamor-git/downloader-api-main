@@ -124,7 +124,8 @@ STATICFILES_DIRS = ( os.path.join('static'), )
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://148.251.41.232:3000",
-    "http://api.savetube.me"
+    "http://api.savetube.me",
+    "http://148.251.41.232"
 ]
 
 CORS_ALLOW_HEADERS = [
