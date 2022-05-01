@@ -70,7 +70,7 @@ services:
         command: >-
              certonly --standalone --reinstall
              --email yugdamor.dev@gmail.com --agree-tos --no-eff-email
-             -d api.savetube.me -d ytshorts.savetube.me
+             -d ytshorts.savetube.me
 
 networks:
     proxy:
