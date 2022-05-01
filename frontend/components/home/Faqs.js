@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const Faqs = ({ faqs }) => {
+const Faqs = ({ faqs,faq_title }) => {
   return (
     <section className="py-[48px] px-[15px] text-[#343a40] sm:max-w-[720px] md:max-w-[960px] lg:max-w-[1140px]  sm:mx-auto">
       <h3 className="text-center mb-5 font-medium text-xl sm:text-[32px] sm:mb-12">
-        FAQs for Youtube Short Video Download
+        {faq_title}
       </h3>
       {faqs.map((faq) => (
         <div

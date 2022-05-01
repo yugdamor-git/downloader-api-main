@@ -61,6 +61,8 @@ export default function Home(props) {
       description: `${t("home:card6_description")}`,
     },
   ];
+
+
   const FAQS_DATA = [
     {
       id: 1,
@@ -273,7 +275,7 @@ export default function Home(props) {
         sec4_p5={t("home:How_d_y_s_p5")}
         sec4_p6={t("home:How_d_y_s_p6")}
       />
-      <Faqs faqs={FAQS_DATA} />
+      <Faqs faqs={FAQS_DATA} faq_title={t('home:faqs_main_title')} />
     </div>
   );
 }

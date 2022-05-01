@@ -160,7 +160,7 @@ const Navbar = ({ home, blog, contact, mp3, thumbnail, href }) => {
                       <option
                         key={langu.label}
                         value={langu.value}
-                        selected={langu.value == router.locale}
+                        defaultValue={langu.value == router.locale}
                       >
                         {langu.label}
                       </option>

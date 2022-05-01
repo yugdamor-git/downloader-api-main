@@ -25,30 +25,73 @@ import Link from "../../components/thumbnail/Link";
 import Cards from "../../components/youtube-to-mp3/Cards";
 import Converter from "../../components/youtube-to-mp3/Converter";
 import HowToConvert from "../../components/youtube-to-mp3/HowToConvert";
+import Faqs from "../../components/home/Faqs";
 
 export default function YoutubeThumbinalDownloader(props) {
   const router = useRouter();
 
   const { t } = useTranslation();
 
+  const FAQS_DATA = [
+    {
+      id: 1,
+      title: `${t("thumbnail:faqs1_title")}`,
+      description: `${t("thumbnail:faqs1_description")}`,
+    },
+    {
+      id: 2,
+      title: `${t("thumbnail:faqs2_title")}`,
+      description: `${t("thumbnail:faqs2_description")}`,
+    },
+    {
+      id: 3,
+      title: `${t("thumbnail:faqs3_title")}`,
+      description: `${t("thumbnail:faqs3_description")}`,
+    },
+    {
+      id: 4,
+      title: `${t("thumbnail:faqs4_title")}`,
+      description: `${t("thumbnail:faqs4_description")}`,
+    },
+  ];
+  
+
   const CARDS = [
     {
       id: 1,
       img: "fast.svg",
-      title: `${t("thumbnail:best_card1_title")}`,
-      description: `${t("thumbnail:best_card1_p")}`,
+      title: `${t("thumbnail:card1_title")}`,
+      description: `${t("thumbnail:card1_paragraph")}`,
     },
     {
       id: 2,
       img: "loop.svg",
-      title: `${t("thumbnail:best_card2_title")}`,
-      description: `${t("thumbnail:best_card2_p")}`,
+      title: `${t("thumbnail:card2_title")}`,
+      description: `${t("thumbnail:card2_p")}`,
     },
     {
       id: 3,
       img: "shield.svg",
-      title: `${t("thumbnail:best_card3_title")}`,
-      description: `${t("thumbnail:best_card3_p")}`,
+      title: `${t("thumbnail:card3_title")}`,
+      description: `${t("thumbnail:card3_p")}`,
+    },
+    {
+      id: 4,
+      img: "ux-design.svg",
+      title: `${t("thumbnail:card4_title")}`,
+      description: `${t("thumbnail:card4_paragraph")}`,
+    },
+    {
+      id: 5,
+      img: "instructions.svg",
+      title: `${t("thumbnail:card5_title")}`,
+      description: `${t("thumbnail:card5_p")}`,
+    },
+    {
+      id: 6,
+      img: "computing.svg",
+      title: `${t("thumbnail:card6_title")}`,
+      description: `${t("thumbnail:card6_p")}`,
     },
   ];
   const cards2 = [
@@ -69,15 +112,15 @@ export default function YoutubeThumbinalDownloader(props) {
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>{t("shortMp3:thumbnail_page_title")}</title>
-        <meta name="og:title" content={t("shortMp3:thumbnail_page_title")} />
+        <title>{t("thumbnail:meta_title")}</title>
+        <meta name="og:title" content={t("thumbnail:meta_title")} />
         <meta
           name="description"
-          content={t("shortMp3:thumbnail_page_description")}
+          content={t("thumbnail:meta_description")}
         />
         <meta
           name="og:description"
-          content={t("shortMp3:thumbnail_page_description")}
+          content={t("thumbnail:meta_description")}
         />
         <meta
           property="og:url"
@@ -230,12 +273,12 @@ export default function YoutubeThumbinalDownloader(props) {
         title={t("thumbnail:thumbinal_downloader_title")}
         p={t("thumbnail:thumbinal_downloader_p")}
       />
-      <Converter
-        title={t("thumbnail:free_online_title")}
-        p={t("thumbnail:free_online_p")}
-        button={t("thumbnail:free_online_btn")}
-      />
+    
       <HowToConvert title={t("thumbnail:how_title")} cards={cards2} />
+
+      <Converter title={t("thumbnail:paragraph_title")} paragraph={t("thumbnail:paragraph")}/>
+
+      <Faqs faqs={FAQS_DATA} faq_title={t("thumbnail:faqs_main_title")} />
     </div>
   );
 }

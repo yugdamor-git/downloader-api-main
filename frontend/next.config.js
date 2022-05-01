@@ -4,7 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   i18n,
   env: {
-    BASE_DOMAIN: "https://videos-phi-ten.vercel.app",
+    BASE_DOMAIN: "https://ytshorts.savetube.me",
   },
 };
 

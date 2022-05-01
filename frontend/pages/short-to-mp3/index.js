@@ -18,6 +18,7 @@ import Link from "../../components/home/Link";
 import Cards from "../../components/youtube-to-mp3/Cards";
 import Converter from "../../components/youtube-to-mp3/Converter";
 import HowToConvert from "../../components/youtube-to-mp3/HowToConvert";
+import Faqs from "../../components/home/Faqs";
 
 export default function ShortToMp3(props) {
   const router = useRouter();
@@ -41,6 +42,66 @@ export default function ShortToMp3(props) {
       title: `${t("shortMp3:card3_title")}`,
       description: `${t("shortMp3:card3_p")}`,
     },
+    {
+      id: 4,
+      img: "ux-design.svg",
+      title: `${t("shortMp3:card4_title")}`,
+      description: `${t("shortMp3:card4_paragraph")}`,
+    },
+    {
+      id: 5,
+      img: "instructions.svg",
+      title: `${t("shortMp3:card5_title")}`,
+      description: `${t("shortMp3:card5_p")}`,
+    },
+    {
+      id: 6,
+      img: "computing.svg",
+      title: `${t("shortMp3:card6_title")}`,
+      description: `${t("shortMp3:card6_p")}`,
+    },
+  ];
+
+  // {
+  //   id: 4,
+  //   img: "ux-design.svg",
+  //   title: `${t("home:card4_title")}`,
+  //   description: `${t("home:card4_description")}`,
+  // },
+  
+  // {
+  //   id: 5,
+  //   img: "instructions.svg",
+  //   title: `${t("home:card5_title")}`,
+  //   description: `${t("home:card5_description")}`,
+  // },
+  // {
+  //   id: 6,
+  //   img: "computing.svg",
+  //   title: `${t("home:card6_title")}`,
+  //   description: `${t("home:card6_description")}`,
+  // },
+  const FAQS_DATA = [
+    {
+      id: 1,
+      title: `${t("shortMp3:faqs1_title")}`,
+      description: `${t("home:faqs1_description")}`,
+    },
+    {
+      id: 2,
+      title: `${t("shortMp3:faqs2_title")}`,
+      description: `${t("home:faqs2_description")}`,
+    },
+    {
+      id: 3,
+      title: `${t("shortMp3:faqs3_title")}`,
+      description: `${t("home:faqs3_description")}`,
+    },
+    {
+      id: 4,
+      title: `${t("shortMp3:faqs4_title")}`,
+      description: `${t("home:faqs4_description")}`,
+    },
   ];
   const cards2 = [
     {
@@ -56,19 +117,20 @@ export default function ShortToMp3(props) {
       p: `${t("shortMp3:how_card3_p")}`,
     },
   ];
+
   return (
     <div>
       <Head>
         <meta charSet="utf-8" />
-        <title>{t("shortMp3:mp3_page_title")}</title>
-        <meta name="og:title" content={t("shortMp3:mp3_page_title")} />
+        <title>{t("shortMp3:meta_title")}</title>
+        <meta name="og:title" content={t("shortMp3:meta_title")} />
         <meta
           name="description"
-          content={`${t("shortMp3:mp3_page_description")}`}
+          content={`${t("shortMp3:meta_description")}`}
         />
         <meta
           name="og:description"
-          content={`${t("shortMp3:mp3_page_description")}`}
+          content={`${t("shortMp3:meta_description")}`}
         />
         <meta
           property="og:url"
@@ -221,12 +283,12 @@ export default function ShortToMp3(props) {
         title={t("shortMp3:best_section_title")}
         p={t("shortMp3:best_section_p")}
       />
-      <Converter
-        title={t("shortMp3:converter_title")}
-        p={t("shortMp3:converter_p")}
-        button={t("shortMp3:convert_now_btn")}
-      />
+      
+      
+
       <HowToConvert title={t("shortMp3:how_to_convert_title")} cards={cards2} />
+      <Converter title={t("shortMp3:paragraph_title")} paragraph={t("shortMp3:paragraph")}/>
+      <Faqs faqs={FAQS_DATA} faq_title={t("shortMp3:faqs_main_title")} />
     </div>
   );
 }

@@ -1,12 +1,49 @@
 {
-  "best_section_p": "Our YouTube to MP3 converter and downloader allows you convert and download MP3 from Youtube videos. Helps you listen to music offline, whenever you like. Turn your favorite YouTube channel into a music album that you can enjoy while working.",
-  "best_section_title": "The best Youtube MP3 converter",
-  "card1_paragraph": "This website is the fast and easy way to download and save any YouTube video to MP3 or MP4. Simply copy YouTube URL, paste it on the search box and click on \"Convert\" button. No register accounts needed",
-  "card1_title": "Fast and easy to use",
-  "card2_p": "Download and convert Youtube videos as much as you want without limitation and always free.",
-  "card2_title": "Without limitation",
-  "card3_p": "With the rising awareness of device security, people attach great importance to personal data. The service is totally clean with no virus under intense supervision based on security database.",
-  "card3_title": "100% Safe and Clean",
+  "meta_title":"YouTube Shorts to MP3 Online Downloader",
+  "meta_description":"Download MP3 from YouTube shorts videos. The easy and fastest way to download and extract MP3 from YouTube shorts videos for free.",
+  
+  "l_p": "Download MP3 from YouTube shorts videos.",
+  "l_title": "Youtube Shorts To MP3",
+
+  "best_section_p": "You can find some of the features below",
+  "best_section_title": "Features of YouTube Shorts to MP3",
+  
+  "card1_paragraph": "There is no need to wait long to download MP3 format from YouTube videos. Enter the YouTube link in the above input field, select the quality and get the file.",
+  "card1_title": "Fast Download",
+
+  "card2_p": "You can choose the quality of MP3 before downloading. For example, 64 Kbps, 128 Kbps, 320 Kbps, etc.",
+  "card2_title": "Choose Quality",
+  
+  "card3_p": "We don’t charge any fee from this website. Our website is free to use for everyone.",
+  "card3_title": "Free to Use",
+  
+  "card4_paragraph": "You don’t need to log in to use our website. Because this website is free to use, you don’t need to go through any login or signup process.",
+  "card4_title": "No Login Required",
+  
+  "card5_p": "Download as many MP3 files as you wish to. We don’t limit any number of downloads on our website.",
+  "card5_title": "Unlimited Downloads",
+  
+  "card6_p": "Our website is straightforward to use. Even a newbie can use our website to download an MP3 file from YouTube video URL.",
+  "card6_title": "Easy to Use",
+  
+  "faqs_main_title": "FAQs regarding YouTube Shorts to MP3 Downloader",
+
+  "faqs1_description": "Yes, it’s possible to download an MP3 version of any YouTube video, whether shorts or regular videos.",
+  "faqs1_title": "Can I download MP3 of regular YouTube videos?",
+
+  "faqs2_description": "No, all the content belongs to their respected owners. The content might be copyright protected, so beware before using it for commercial purposes.",
+  "faqs2_title": "If I download an MP3 file from this website, is it copyright-free?",
+  
+  "faqs3_description": "For now, we only support MP3 format. In the future, we are planning to add support for other formats like 3GP, MP4, WMA, M4A, FLV, WEBM, and MO formats.",
+  "faqs3_title": "Can I download audio in any other format?",
+
+  "faqs4_description": "The video you are trying to download might be restricted for some countries, removed from YouTube, or a private video. Our website supports downloading MP3 from public videos only.",
+  "faqs4_title": "This website is showing an error while downloading.",
+
+  "paragraph_title":"YouTube Shorts to MP3 Downloader",
+  "paragraph":"Now, download MP3 from YouTube shorts videos with ease. SaveTube provides you with an option to choose the quality before downloading. From lowest to highest, you can choose any quality. Our website works on every platform, including mobile phones, desktops, tablets, etc. Downloading audio from YouTube shorts is now easier than before. Just enter the link, and choose quality to get started.",
+
+
   "converter_p": "By using our Youtube Mp3 Converter you can easily convert YouTube videos to MP3 files and download them for free - this service works for computers, tablets and mobile devices. The audio files are always converted in the highest available quality.",
   "converter_title": "Youtube MP3 converter",
   "convert_now_btn": "Convert Now",
@@ -15,10 +52,9 @@
   "how_card3_p": "Wait until the conversion is completed and download the file. Very easy and fast.",
   "how_to_convert_title": "How to Convert Youtube to MP3?",
   "l_button": "Convert MP3",
-  "l_p": "Download MP3 from Youtube with our YouTube to MP3 converter and downloader.",
-  "l_title": "Youtube to MP3",
   "mp3_page_description": "Download YouTube shorts videos in MP3 format.",
   "mp3_page_title": "YouTube Shorts to MP3",
   "thumbnail_page_description": "Download latest YouTube thumbnails on your device.",
+
   "thumbnail_page_title": "YouTube Thumbnail Downloader - Download YouTube Thumbnails"
 }
