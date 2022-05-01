@@ -62,7 +62,9 @@ services:
         image: certbot/certbot:latest
         depends_on:
             - api-server
-        
+        ports:
+            - 80:80
+            - 443:443
         volumes:
             - ./certbot/www/:/var/www/certbot/:rw
             - ./certbot/conf/:/etc/letsencrypt/:rw
