@@ -60,10 +60,12 @@ services:
         command: >-
              certonly --reinstall --webroot --webroot-path=/var/www/certbot
              --email yugdamor.dev@gmail.com --agree-tos --no-eff-email
-             -d ytshorts.savetube.me && certonly --reinstall --webroot --webroot-path=/var/www/certbot
-             --email yugdamor.dev@gmail.com --agree-tos --no-eff-email
-             -d api.savetube.me
+             -d ytshorts.savetube.me
 
 networks:
     proxy:
         name: proxy
+
+# && certonly --reinstall --webroot --webroot-path=/var/www/certbot
+#              --email yugdamor.dev@gmail.com --agree-tos --no-eff-email
+#              -d api.savetube.me
