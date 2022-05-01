@@ -58,21 +58,21 @@ services:
         networks:
             - proxy
     
-    certbot:
-        image: certbot/certbot:latest
-        depends_on:
-            - api-server
-        ports:
-            - 80:80
-            - 443:443
-        volumes:
-            - ./certbot/www/:/var/www/certbot/:rw
-            - ./certbot/conf/:/etc/letsencrypt/:rw
+    # certbot:
+    #     image: certbot/certbot:latest
+    #     depends_on:
+    #         - api-server
+    #     ports:
+    #         - 80:80
+    #         - 443:443
+    #     volumes:
+    #         - ./certbot/www/:/var/www/certbot/:rw
+    #         - ./certbot/conf/:/etc/letsencrypt/:rw
         
-        command: >-
-             certonly --standalone --reinstall
-             --email yugdamor.dev@gmail.com --agree-tos --no-eff-email
-             -d ytshorts.savetube.me
+    #     command: >-
+    #          certonly --standalone --reinstall
+    #          --email yugdamor.dev@gmail.com --agree-tos --no-eff-email
+    #          -d ytshorts.savetube.me
 
 networks:
     proxy:
