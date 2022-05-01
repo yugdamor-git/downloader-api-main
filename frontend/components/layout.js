@@ -10,13 +10,6 @@ const Layout = ({children}) => {
         <Script id="ads-init" strategy="afterInteractive" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3476621303569503"
      crossOrigin="anonymous"></Script>
 
-  <ins className="adsbygoogle"
-     style={{"display":"block"}}
-     data-ad-client="ca-pub-3476621303569503"
-     data-ad-slot="3627285369"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-
     <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}

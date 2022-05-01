@@ -228,8 +228,11 @@ export default function Home(props) {
         thumbnail={t("home:youtube_thumbnail")}
         href="/"
       />
-      <div className="w-80 h-24 m-auto mt-5 bg-[#d2d2d2]  flex items-center justify-center mx-auto">
-        addvertisement
+      <div>
+      <ins className="adsbygoogle"
+     style={{display:"inline-block",width:"320px",height:"100px"}}
+     data-ad-client="ca-pub-3476621303569503"
+     data-ad-slot="5118507655"></ins>
       </div>
       <Link
         data={{
@@ -241,8 +244,13 @@ export default function Home(props) {
         }}
         contentType="video"
       />
-      <div className="w-[414px] h-[345px] sm:w-[720px] md:h-[280px] md:w-[960px] sm:h-[280px] sm:mx-auto mt-5 bg-[#d2d2d2] flex items-center justify-center max-w-full ">
-        addvertisement
+      <div>
+      <ins className="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-3476621303569503"
+     data-ad-slot="3627285369"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
       </div>
       <Cards
         cards={CARDS}

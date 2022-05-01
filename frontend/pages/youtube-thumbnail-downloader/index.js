@@ -257,6 +257,12 @@ export default function YoutubeThumbinalDownloader(props) {
         thumbnail={t("home:youtube_thumbnail")}
         href="/youtube-thumbnail-downloader"
       />
+       <div>
+      <ins className="adsbygoogle"
+     style={{display:"inline-block",width:"320px",height:"100px"}}
+     data-ad-client="ca-pub-3476621303569503"
+     data-ad-slot="5118507655"></ins>
+      </div>
       <Link
         data={{
           title: `${t("thumbnail:l_title")}`,
@@ -268,6 +274,14 @@ export default function YoutubeThumbinalDownloader(props) {
 
         contentType="thumbnail"
       />
+       <div>
+      <ins className="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-3476621303569503"
+     data-ad-slot="3627285369"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+      </div>
       <Cards
         cards={CARDS}
         title={t("thumbnail:thumbinal_downloader_title")}

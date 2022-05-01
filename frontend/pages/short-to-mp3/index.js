@@ -267,6 +267,13 @@ export default function ShortToMp3(props) {
         thumbnail={t("home:youtube_thumbnail")}
         href="short-to-mp3"
       />
+
+      <div>
+      <ins className="adsbygoogle"
+     style={{display:"inline-block",width:"320px",height:"100px"}}
+     data-ad-client="ca-pub-3476621303569503"
+     data-ad-slot="5118507655"></ins>
+      </div>
       <Link
         data={{
           title: `${t("shortMp3:l_title")}`,
@@ -277,6 +284,14 @@ export default function ShortToMp3(props) {
         }}
         contentType="audio"
       />
+       <div>
+      <ins className="adsbygoogle"
+     style={{display:"block"}}
+     data-ad-client="ca-pub-3476621303569503"
+     data-ad-slot="3627285369"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+      </div>
 
       <Cards
         cards={CARDS}
