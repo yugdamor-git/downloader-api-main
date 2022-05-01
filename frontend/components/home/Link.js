@@ -69,13 +69,7 @@ const Link = ({ data,contentType }) => {
 
   const [currentVideoData,setCurrentVideoData] = useState(null)
 
-  useEffect(() => {
-    if (inputVal.length == 0) {
-      setIsUrl("");
-    } else {
-      validURL(inputVal);
-    }
-  }, [inputVal]);
+
 
   ///////////// validate url function //////////
   const validURL = async(str) => {
@@ -121,7 +115,13 @@ const Link = ({ data,contentType }) => {
     return !!pattern.test(str);
   };
 
-  
+  useEffect(() => {
+    if (inputVal.length == 0) {
+      setIsUrl("");
+    } else {
+      validURL(inputVal);
+    }
+  }, [inputVal]);
 
   ////////// get video function ////////
   const getVideoHandler = async(e) => {

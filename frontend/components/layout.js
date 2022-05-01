@@ -6,7 +6,7 @@ import Script from 'next/script'
 const Layout = ({children}) => {
   return (
     <div>
-        <Head>
+        
         <Script id="ads-init" strategy="afterInteractive" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3476621303569503"
      crossOrigin="anonymous"></Script>
 
@@ -35,7 +35,7 @@ const Layout = ({children}) => {
           `,
         }}
       />
-        </Head>
+
         <main>
             {children}
         </main>
