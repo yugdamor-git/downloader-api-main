@@ -11,8 +11,6 @@ services:
             - "8700:8700"
         networks:
             proxy:
-        
-        
 
     frontend:
         container_name: frontend
