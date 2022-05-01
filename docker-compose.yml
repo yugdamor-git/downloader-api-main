@@ -26,8 +26,11 @@ services:
 
     api-server:
         container_name: api-server
+        
         restart: always
+
         build: ./nginx
+        
         ports:
             - 80:80
             - 443:443
@@ -35,6 +38,7 @@ services:
             - api
         networks:
             proxy:
+        
         volumes:
             - ./static:/home/app/web/static
             - ./media:/home/app/web/media
@@ -43,10 +47,14 @@ services:
             
     memcached:
         container_name: memcached
+        
         image: memcached:latest
+        
         restart: always
+        
         ports:
             - 11211
+        
         networks:
             - proxy
     
@@ -54,13 +62,15 @@ services:
         image: certbot/certbot:latest
         depends_on:
             - api-server
+        
         volumes:
             - ./certbot/www/:/var/www/certbot/:rw
             - ./certbot/conf/:/etc/letsencrypt/:rw
+        
         command: >-
-             certonly --reinstall --webroot --webroot-path=/var/www/certbot
+             certonly --standalone --reinstall --webroot --webroot-path=/var/www/certbot
              --email yugdamor.dev@gmail.com --agree-tos --no-eff-email
-             -d ytshorts.savetube.me
+             -d api.savetube.me
 
 networks:
     proxy:
